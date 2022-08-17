@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwight Weather Dashboard</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="assets\style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <section>
+        <aside class="sidebar">
+            <div class="form-holder">
+                <form>
+                    <label>Search for a City: </label>
+                    <br>
+                    <input type="text" placeholder="Search" id="searchBar">
+                    <input type="submit" value="Search" id="searchBtn">
+
+                </form>
+                <h2>Last Search</h2>
+                <p class="history"></p>
+            </div>
+        </aside>
+        <div class="content">
+            <div class="content-box">
+                <h2 id="currentDayTime"></h2>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

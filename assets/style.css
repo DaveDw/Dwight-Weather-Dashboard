@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
+header {
+    text-align: center;
+    height:7vh;
+    padding: 5px;
+    padding-left: 30px;
+    color: azure;
+    background: linear-gradient(45deg, rgb(93, 115, 225), rgb(48, 0, 83)) ;
+}
+
+label{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+section {
+    display: flex;
+}
+
+.sidebar {
+    padding-top: 5px;
+    /* background-color: blueviolet; */
+    width: 25vw;
+    height:93vh;
+    border-right: 2px solid grey;
+}
+
+.content {
+    text-align: center;
+    padding: 5px;
+    /* background-color: aqua; */
+    width: 75vw;
+}
