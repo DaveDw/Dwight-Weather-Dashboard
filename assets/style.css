@@ -35,3 +35,20 @@ section {
     /* background-color: aqua; */
     width: 75vw;
 }
+
+.forecast {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    height:200px;
+    margin: 10px;
+    background: rgb(93, 115, 225);
+    border-radius: 20px;
+}
+
+.card-text {
+    color: aliceblue;
+}
