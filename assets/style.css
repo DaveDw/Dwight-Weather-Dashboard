@@ -19,13 +19,14 @@ label{
 
 section {
     display: flex;
+    height: 100%;
 }
 
 .sidebar {
     padding-top: 5px;
     /* background-color: blueviolet; */
     width: 25vw;
-    height:93vh;
+    height:100%;
     border-right: 2px solid grey;
 }
 
@@ -39,6 +40,7 @@ section {
 .forecast {
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -51,4 +53,8 @@ section {
 
 .card-text {
     color: aliceblue;
+}
+
+#searchBar {
+    width: 95%;
 }

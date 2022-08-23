@@ -6,6 +6,7 @@ var latestSearch = document.querySelector(".latest-search");
 var apiKey = "5baf2d7235863d62db281131097e2219";
 var currentDayTime = moment().format("MMMM Do YYYY, h:mma");
 $("#currentDayTime").text(currentDayTime);
+var searchHistory = [];
 
 function forecast(lat, lon) {
   var queryURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
@@ -107,11 +108,28 @@ $("#searchBtn").on("click", function (event) {
   event.preventDefault();
   console.log(searchBar.value);
   var searchRes = searchBar.value;
+
+  if(searchRes){
+  searchHistory.push(searchRes);
+  localStorage.setItem("lastSearch", JSON.stringify(searchHistory));
+  latestSearch.innerHTML = searchRes;
+  }
   var lastSearch = $(`
   <p>${searchRes}</p>
   `);
-  $(".history").empty();
-  $(".history").append(lastSearch);
+  $(".latest-search").empty();
+  $(".latest-search").append(lastSearch);
 
   coordinateConversion(searchRes);
 });
+
+//setting the values in the local storage with the key lastSearch equal to the search history array THEN setting the variable equal to that
+//get the info from local Storage and place it in the variable atoredSearches
+var storedSearches = JSON.parse(localStorage.getItem("lastSearch"));
+
+//if there are values in the variable, set it equal to the the values with the key lastSearch
+//
+if (storedSearches != null){
+    searchHistory = JSON.parse(localStorage.getItem("lastSearch"));
+    latestSearch.innerHTML = searchHistory[searchHistory.length-1];
+}
